@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
+  <style>
+    .ind{
+      z-index: 0;
+    }
+    .center{
+      font-weight: bold;
+      font-size: large;
+      top: 55%;
+      left: 48%;
+    }
+    .below_center{
+      font-size:244;
+      top: 60%;
+      left: 42%;
+    }
+    .above_center{
+      top: 70%;
+      left: 50%;
+    }
+  .on_image{
+    margin: auto;
+    padding: auto;  
+    }
+  </style>
+  <body class="bg-secondary">
+    <div class="box ms-5 me-5">
+      <div class="bg-warning">
+        <div class="navbar mx-5 px-2 py-2">
+          <a class="text-weight-bold navbar-brand text-dark me-auto" href="#"
+            >BuilderZ</a
+          >
+          <!-- <a class="nav-link text-dark ms-auto" href="#">Opening Hour</a>
+            <a class="nav-link text-dark ms-auto me-auto" href="#">Call us</a>
+            <a class="nav-link text-dark text-align-end" href="#">Email us</a> -->
+          <div class="d-flex flex-row">
+            <div class="p-2">
+              <p>Opening Hour</p>
+              <p>We are open from 9 to 11</p>
+            </div>
+            <div class="p-2">
+              <p>Call us</p>
+              <p>+91 1234567890</p>
+            </div>
+            <div class="p-2">
+              <p>Email us</p>
+              <p>
+                <a class="text-decoration-none text-dark" href="mailto:">abc@gmail.com</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="navbar ms-5 me-5 px-1 py-0 bg-dark g-0">
+          <a class="nav-link text-light" href="#">Home</a>
+          <a class="nav-link text-light" href="#">About</a>
+          <a class="nav-link text-light" href="#">Serivce</a>
+          <a class="nav-link text-light" href="#">Team</a>
+          <a class="nav-link text-light" href="#">Project</a>
+          <button class="btn text-light dropdown-toggle">Page</button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Page1</a>
+            <a class="dropdown-item" href="#">Page2</a>
+            <a class="dropdown-item" href="#">Page3</a>
+          </div>
+          <a class="nav-link text-light" href="#">Contact</a>
+          <button class="btn btn-light ms-auto">Get a call</button>
+        </div>
+      </div>
+      <div class="image">
+        <img
+          class="img-fluid position-relative"
+          src="./image/space-img.jpeg"
+          alt=""
+        />
+        <div class="on_image m-auto w-100 h-100">
+          <p class="ind center position-absolute text-white">We are professional</p>
+        <h1 class="ind below_center position-absolute text-white">For your dream project</h1>
+        <button class=" above_center btn btn-light ind position-absolute">Get a quote</button>
+        </div>
+      </div>
+      <div class="row g-0">
+        <div class="col-4">
+          <div class="card text-warning bg-dark pt-3">
+            <div class="card-body">
+              <h5 class="card-title">Expert Worker</h5>
+              <p class="card-text">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Quisquam praesentium, ut quod a quidem dolore.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="card bg-warning text-dark pt-3">
+            <div class="card-body">
+              <h5 class="card-title">Quality Worker</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptate, a harum! Excepturi dolorem veritatis similique..
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="card text-warning bg-dark pt-3">
+            <div class="card-body">
+              <h5 class="card-title">24/7 support</h5>
+              <p class="card-text">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Quisquam praesentium, ut quod a quidem dolore.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+</head>
+<body>
+   <div class="row">
+    <div class="col-4 m-auto">
+        <form action="" class="frm1 form">
+            <label class=" form-label" for="">Enter a String</label><br>
+            <input class=" form-control" type="text" id="num">
+        </form>
+        <button class=" m-auto btn  btn-secondary" onclick="reverse()">Click to reverse the String</button>
+    </div>
+   </div>
+    <script>
+        function reverse(){
+            let val=document.getElementById("num").value;
+            console.log(typeof val);
+            let reverse="";
+           for(let i=0;i<val.length;i++){
+            reverse=val.charAt(i)+reverse;
+           }
+            document.getElementById("num").value=reverse
+            
+        }
+    </script>
+</body>
+</html>

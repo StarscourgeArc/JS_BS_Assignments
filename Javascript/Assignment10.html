@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    button {
+      width: 10%;
+      margin-left: 50%;
+      margin-right: 50%;
+      margin-top: 15px;
+    }
+    p {
+      width: 50%;
+      margin-left: 50%;
+    }
+  </style>
+  <body>
+    <button id="date" onclick="show_date()">Show date</button><br />
+    <p id="time_display"></p>
+
+    <button id="Time" onclick="show_time()">Show Time</button>
+    <p id="date_display"></p>
+
+    <script>
+      function show_time() {
+        let obj = new Date();
+        console.log(obj);
+        document.getElementById("date_display").innerText = obj;
+      }
+      function show_date() {
+        const monthNames = [
+          "January",
+          "February",
+          "March",
+          "April",
+          "May",
+          "June",
+          "July",
+          "August",
+          "September",
+          "October",
+          "November",
+          "December",
+        ];
+        let obj = new Date();
+        let ans =
+          obj.getDate() +
+          "/" +
+          monthNames[obj.getMonth()] +
+          "/" +
+          obj.getFullYear();
+        document.getElementById("time_display").innerText = ans;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <style>
+      input {
+        width: 98%;
+      }
+      table {
+        background-color:pink;
+        width: 70%;
+        margin: auto;
+        margin-top: 10%;
+      }
+      .flex{
+        width: 20%;
+        display: flex;
+      }
+      .flex2{
+        padding: 5px;
+        width: 20%;
+        display: flex;
+        margin-left:25% ;
+      }
+      p{
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <!-- First Name -->
+        <td><label for="FirstName">First Name</label></td>
+        <td>
+          <input class="expand" type="text" name="FirstName" id="FirstName_" />
+        </td>
+        <td><p id="invalid-msg"></p></td>
+      </tr>
+      <tr>
+        <!-- Last Name -->
+        <td><label for="LastName">Last Name</label></td>
+        <td>
+          <input class="expand" type="text" name="LastName" id="LastName_" />
+        </td>
+        <td><p id="invalid-msg1"></p></td>
+      </tr>
+      <tr>
+        <!-- Email -->
+        <td><label for="Email">Email</label></td>
+        <td><input class="expand" type="email" name="email" id="email_" /></td>
+        <td><p id="invalid-msg2"></p></td>
+      </tr>
+      <tr>
+        <!-- Password -->
+        <td><label for="password">Password</label></td>
+        <td>
+          <input
+            class="expand"
+            type="password"
+            name="password"
+            id="password_"
+          />
+        </td>
+        <td><p id="invalid-msg3"></p></td>
+      </tr>
+      <tr>
+        <!-- Repassword -->
+        <td><label for="Repassword">Re-enter Password</label></td>
+        <td>
+          <input
+            class="expand"
+            type="password"
+            name="Repassword"
+            id="Repassword_"
+          />
+        </td>
+        <td><p id="invalid-msg4"></p></td>
+      </tr>
+      <tr>
+        <!-- Gender -->
+        <td rowspan="2">
+          <label for="Gender">Gender:</label>
+        </td>
+        <td class="Gen">Male<input type="radio" name="Gender" /></td>
+      </tr>
+      <tr>
+        <td class="Gen">Female<input type="radio" name="Gender" /></td>
+      </tr>
+      <tr>
+        <!-- Age -->
+        <td><label for="Age">Age</label></td>
+        <td><input class="expand" type="number" name="Age" id="Age" /></td>
+        <td><p id="invalid-msg5"></p></td>
+      </tr>
+      <tr>
+        <!-- Phone number -->
+        <td><label for="Phone">Phone Number</label></td>
+        <td><input class="expand" type="tel" name="Phone" id="Phone" /></td>
+        <td><p id="invalid-msg6"></p></td>
+      </tr>
+      <tr>
+        <!-- Address -->
+        <td><label for="Address">Address</label></td>
+        <td><textarea name="Address" rows="4" cols="100"></textarea></td>
+        <td><p id="invalid-msg7"></p></td>
+      </tr>
+      <tr>
+        <td><label for="State">State</label></td>
+        <td><input type="text" name="State" id="State" /></td>
+        <td><p id="invalid-msg8"></p></td>
+      </tr>
+      <tr>
+        <!-- Country -->
+        <td><label for="Country">Country</label></td>
+        <td>
+          <select name="country" style="width: 98%">
+            <option value="" disabled selected>Select your country</option>
+            <option value="India">India</option>
+            <option value="USA">USA</option>
+            <option value="UK">UK</option>
+            <option value="Canada">Canada</option>
+            <option value="Australia">Australia</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td><label for="Languagess">Languages Known</label></td>
+        <td>
+         <div class="flex">
+
+          <input type="checkbox" name="Languages" id="Languages" />English
+          <input type="checkbox" name="Languages" id="Languages" />Kannada
+          <input type="checkbox" name="Languages" id="Languages" />Hindi
+          <input type="checkbox" name="Languages" id="Languages" />Telgu
+         </div>
+    
+        </td>
+      </tr>
+      <tfoot>
+        <tr>
+          <td colspan="2" style="text-align: right">
+            Login in to ethnus website
+            <a href="mailto:recipient@gmail.com">Ethnus</a>
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+    <div class="flex2">
+      <span>Herby I declare all give details are true</span>
+      <input style="height: 15px; width:15px;" type="checkbox" name="" id="">
+    </div>
+
+    <div>
+      <button style="margin-left: 50%" onclick="validate()" type="submit">Register</button>
+    </div>
+    <script>
+      function validate() {
+        let fn = document.getElementById("FirstName_").value;
+        let ln = document.getElementById("LastName_").value;
+        let email = document.getElementById("email_").value;
+        let pwd = document.getElementById("password_").value;
+        let repwd = document.getElementById("Repassword_").value;
+        let age = document.getElementById("Age").value;
+        let phone = document.getElementById("Phone").value;
+        let state = document.getElementById("State").value;
+        if (fn.length < 5) {
+          document.getElementById("invalid-msg").innerHTML = "Poor Strength";
+        }
+        if (ln.length < 5) {
+          document.getElementById("invalid-msg1").innerHTML = "Poor Strength";
+        }
+        if (email.length < 5) {
+          document.getElementById("invalid-msg2").innerHTML = "Poor Strength";
+        }
+        if (pwd.length < 5) {
+          document.getElementById("invalid-msg3").innerHTML = "Poor Strength";
+        }
+        
+          if(repwd!=pwd){
+            document.getElementById("invalid-msg4").innerHTML = "Password not matching or poor password";
+          }
+        if (age.length < 5) {
+          document.getElementById("invalid-msg5").innerHTML = "Poor Strength";
+        }
+        if (phone.length < 5) {
+          document.getElementById("invalid-msg6").innerHTML = "Poor Strength";
+        }
+        if (state.length < 5) {
+          document.getElementById("invalid-msg8").innerHTML = "Poor Strength";
+        }
+      }
+    </script>
+  </body>
+</html>
